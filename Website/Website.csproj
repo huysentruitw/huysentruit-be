@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <RunAOTCompilation>true</RunAOTCompilation>
+    <!--<WasmStripILAfterAOT>true</WasmStripILAfterAOT> Doesn't work for now: https://github.com/dotnet/runtime/issues/92238 -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
+
+    <CompressionEnabled>true</CompressionEnabled>
   </PropertyGroup>
 
   <ItemGroup>
